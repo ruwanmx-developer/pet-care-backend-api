@@ -6,8 +6,8 @@ const cors = require("cors");
 require("dotenv").config();
 
 // import project modules
-
 const userRoutes = require("./routes/user");
+const appointmentRoutes = require("./routes/appointment");
 
 // create app
 const app = express();
@@ -18,6 +18,7 @@ app.use(cors());
 
 // app routes
 app.use(userRoutes);
+app.use(appointmentRoutes);
 
 // connect database
 mongoose.set("strictQuery", true);
